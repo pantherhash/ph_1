@@ -6,6 +6,7 @@ import sys
 
 base_url = 'http://imgs.xkcd.com/clickdrag/'
 start_node = (0, 0)
+image_size = (2048, 2048)
 
 # state
 explored = {}
@@ -63,7 +64,8 @@ print "Determining dimensions"
 width, height = (max_x-min_x)*image_size[0], (max_y-min_y)*image_size[1]
 print "\t",width,height
 
-# print map
+# print and save map
+print "Creating ASCII-art map"
 lines = []
 ys = range(min_y, max_y)
 ys.reverse()
@@ -74,8 +76,9 @@ for y in ys:
 	output_line = "".join(line)
 	lines.append(output_line)
 
-overview = open("xkcd_overview_map.txt","w")
-for line in lines:		
-	overview.write(line)
-	overview.write("\n")
-overview.close()
+ascii_map = open("xkcd1110_map.txt","w")
+for line in lines:
+	print line
+	ascii_map.write(line)
+	ascii_map.write("\n")
+ascii_map.close()
