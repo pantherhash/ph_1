@@ -1,7 +1,7 @@
 ph_1
 ====
 
-Click and Drag map
+Map of "Click and Drag", http://xkcd.com/1110/
 
 <pre style="font-size:x-small;">
                                *                           *                    
