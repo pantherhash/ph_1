@@ -1,7 +1,9 @@
 ph_1
 ====
 
-Map of "Click and Drag" (original at http://xkcd.com/1110/)
+**ASCII-art map of XKCD Click and Drag world**
+
+"S" denotes the landing image when you look at the comic.
 
 <pre style="font-size:x-small;">
                                *                           *                    
@@ -31,6 +33,8 @@ Map of "Click and Drag" (original at http://xkcd.com/1110/)
                                    **   *                                       
                                     *****                                       
 </pre>
+
+Original comic at http://xkcd.com/1110/
 
 Riddle
 ===
@@ -71,38 +75,4 @@ If all the images of Click and Drag where combined into a single image, it would
 * width: 163840
 * height: 53248
 
-**ASCII-art map of XKCD Click and Drag world**
-
-Overview map of images found using depth first search (see `download_xkcd1110.py`):
-
-"S" denotes the landing image when you look at the comic.
-
-<pre>
-                               *                           *                    
-                               *                          ***                   
-                               **                        *****                  
-                               *                        *******                 
-                              **  **                   *********                
-           *                 ****  ****         **    ***********      *        
-*********************************S**********************************************
-                *          *           *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *                      *                                        
-                *     *                *                                        
-                **********             *                                        
-                         ***           *                                        
-                          **********   *                                        
-                                **     *                                        
-                                 *    ***                                       
-                                 *** ****                                       
-                                   **   *                                       
-                                    *****                                       
-</pre>
 
