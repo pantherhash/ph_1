@@ -55,7 +55,7 @@ It discovers various properties of the comic.
 
 **World dimensions**
 
-We have mapped the '1n1e' type coordinates to '(0,0)' type coordinates.
+'1n1e' type coordinates used in the comic are mapped to '(0,0)' type coordinates.
 
 Minimum and maximum indexes of the Click and Drag world are: 
 
