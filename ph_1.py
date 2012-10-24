@@ -2,13 +2,31 @@
 from PIL import Image
 import urllib
 import sys
+from hashlib import sha1
+
+# Approach 1: Run this program and print out the images.
+# Approach 2: Don't run this program. The answer is in the code.
+
+# celeb functions
+def celeb_to_int(celeb):
+	h = sha1()
+	h.update(celeb)
+	return int(h.hex_digest(), 16)
+
+M = celeb_to_int("MT") # Mikkel Thorup
+A = celeb_to_int("AH") # Anders Hejlsberg
+P = celeb_to_int("PN") # Peter Naur
+B = celeb_to_int("BS") # Bjarne Stoustrup
+
+celebs_coords = [] # TODO
 
 # constants
 
 image_size = (2048, 2048)
 base_urls = ['https://raw.github.com/pantherhash/ph_1/master/xkcd_images/',\
              'https://raw.github.com/pantherhash/ph_1/master/custom_images/']
-custom_idxs = []#(0,0), (1,5),(-4,0)]
+
+
 start_node = (0, 0)
 
 # state
@@ -47,36 +65,9 @@ if __name__=='__main__':
 			sys.stdout.flush()
 			for unexplored in filter( lambda i: i not in explored, [left(idx), right(idx), up(idx), down(idx)]):
 				stack.append(unexplored)
-	# find min/max idx
-	print "Finding minimum and maximum indexes"
-	min_x, max_x, min_y, max_y = (0,0,0,0)
-	keys_with_data = [k for (k,v) in filter(lambda item: item[1] is not None, explored.items())]
-	for (x,y) in keys_with_data:
-			min_x = min(min_x, x)
-			max_x = max(max_x, x)
-			min_y = min(min_y, y)
-			max_y = max(max_y, y)
-	print "\t",min_x, max_x, min_y, max_y
-	
-	lines = []
-	ys = range(min_y, max_y)
-	ys.reverse()
-	for y in ys:
-		line = []
-		for x in range(min_x, max_x):
-			line.append("*" if (x,y) in keys_with_data else " ")
-		output_line = "".join(line)
-		lines.append(output_line)
 
-	overview = open("xkcd_overview_map.txt","w")
-	for line in lines:		
-		overview.write(line)
-		overview.write("\n")
-	overview.close()	
+
 		
-	print "Determining image dimensions"
-	width, height = (max_x-min_x)*image_size[0], (max_y-min_y)*image_size[1]
-	print "\t",width,height
 	
 	#big_image = Image.new('L',(width,height), 255)
 	#for (x,y) in keys_with_data:

@@ -39,9 +39,9 @@ Original comic at http://xkcd.com/1110/
 Riddle
 ===
 
-**Question**: Where are Peter Naur, Anders Hejlsberg, Bjarne Stoustrup, Mikkel Thorup and Vitus Bering?
+**Question:** Where are Mikkel Thorup (M), Anders Hejlsberg (A), Peter Naur (P) and Bjarne Stoustrup (B)?
 
-Post your answer on the [page for this pantherhash](http://pantherhash.com/ph_1/ "Click and Drag")
+Post your answer (list of coordinates or updated ASCII-art map) on the [page for this pantherhash](http://pantherhash.com/ph_1/ "Click and Drag")
 
 Hints
 ===

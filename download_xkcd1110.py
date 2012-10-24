@@ -1,5 +1,6 @@
 # https://raw.github.com/pantherhash/ph_1/master/download_xkcd.py
 import urllib
+import sys
 
 # constants
 
@@ -26,6 +27,8 @@ url = lambda key, base_url, : '%s%d%s%d%s.png' % (base_url, key[0],key[1],key[2]
 load_data = lambda conn: conn.read() if conn.code == 200 else None
 
 # main loop
+print "Using depth first search to crawl Click and Drag"
+found = 0
 if __name__=='__main__':
 	while stack:
 		idx = stack.pop()
@@ -34,9 +37,45 @@ if __name__=='__main__':
 		explored[idx] = data
 		if data is not None:
 			# print and save files to disc
-			print "Found image", u
+			found += 1
+			sys.stdout.write("\rImages found: %d" % found)
+			sys.stdout.flush()
 			imgfile = open("%d%s%d%s.png" % tr(idx), 'w')
 			imgfile.write(data)
 			imgfile.close()
 			for unexplored in filter( lambda i: i not in explored, [left(idx), right(idx), up(idx), down(idx)]):
 				stack.append(unexplored)
+
+# find min/max idx
+print "Finding minimum and maximum indexes"
+min_x, max_x, min_y, max_y = (0,0,0,0)
+keys_with_data = [k for (k,v) in filter(lambda item: item[1] is not None, explored.items())]
+for (x,y) in keys_with_data:
+		min_x = min(min_x, x)
+		max_x = max(max_x, x)
+		min_y = min(min_y, y)
+		max_y = max(max_y, y)
+print "\t",min_x, max_x, min_y, max_y
+
+
+# print image dimensions
+print "Determining dimensions"
+width, height = (max_x-min_x)*image_size[0], (max_y-min_y)*image_size[1]
+print "\t",width,height
+
+# print map
+lines = []
+ys = range(min_y, max_y)
+ys.reverse()
+for y in ys:
+	line = []
+	for x in range(min_x, max_x):
+		line.append("*" if (x,y) in keys_with_data else " ")
+	output_line = "".join(line)
+	lines.append(output_line)
+
+overview = open("xkcd_overview_map.txt","w")
+for line in lines:		
+	overview.write(line)
+	overview.write("\n")
+overview.close()
