@@ -35,7 +35,7 @@ Click and Drag map
 Riddle
 ===
 
-Where are Peter Naur, Anders Hejlsberg, Bjarne Stoustrup, Mikkel Thorup and Vitus Bering?
+**Question**: Where are Peter Naur, Anders Hejlsberg, Bjarne Stoustrup, Mikkel Thorup and Vitus Bering?
 
 Post your answer on the [page for this pantherhash](http://pantherhash.com/ph_1/ "Click and Drag")
 
