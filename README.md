@@ -39,6 +39,13 @@ Where are Peter Naur, Anders Hejlsberg, Bjarne Stoustrup, Mikkel Thorup and Vitu
 
 Post your answer on the [page for this pantherhash](http://pantherhash.com/ph_1/ "Click and Drag")
 
+Hints
+===
+
+**Hint 1**
+
+See `ph_1.py`
+
 Downloading and analysing XKCD: Click and Drag
 ===
 
