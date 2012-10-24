@@ -3,7 +3,7 @@ ph_1
 
 Click and Drag map
 
-<pre style="fontsize:10pt;">
+<pre style="font-size:x-small;">
                                *                           *                    
                                *                          ***                   
                                **                        *****                  
