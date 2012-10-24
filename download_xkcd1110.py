@@ -1,4 +1,4 @@
-# https://raw.github.com/pantherhash/ph_1/master/download_xkcd.py
+# https://raw.github.com/pantherhash/ph_1/master/download_xkcd1110.py
 import urllib
 import sys
 
