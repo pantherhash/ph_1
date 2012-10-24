@@ -1,7 +1,7 @@
 ph_1
 ====
 
-Click and Drag is Downloaded and Modified.
+Click and Drag map
 
 <pre style="fontsize:10pt;">
                                *                           *                    
@@ -32,7 +32,12 @@ Click and Drag is Downloaded and Modified.
                                     *****                                       
 </pre>
 
+Riddle
+===
 
+Where are Peter Naur, Anders Hejlsberg, Bjarne Stoustrup, Mikkel Thorup and Vitus Bering?
+
+Post your answer on the [page for this pantherhash](http://pantherhash.com/ph_1/ "Click and Drag")
 
 Downloading and analysing XKCD: Click and Drag
 ===
